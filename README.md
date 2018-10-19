@@ -104,3 +104,10 @@ Additionally, make the storage link with public storage:
 ```bash
 $ php artisan storage:link
 ```
+
+# Compiling the assets
+To compile the assets, you should be working with Laravel Mix. Images are copied from `resource/assets/images/` to `public/images/` and you can compile your .css and .js files to `app.css` and `app.js` in your `public/` folder that you can use.
+
+```bash
+$ npm install && npm run dev
+```
