@@ -14,6 +14,7 @@
         "doctrine/dbal": "^2.8",
         "fideloper/proxy": "^4.0",
         "flugger/laravel-responder": "^3.0",
+        "friendsofphp/php-cs-fixer": "^2.13",
         "greggilbert/recaptcha": "dev-master",
         "guzzlehttp/guzzle": "^6.3",
         "jenssegers/mongodb": "^3.4",
