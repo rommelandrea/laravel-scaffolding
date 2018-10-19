@@ -1,0 +1,17 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vscode
+/.vagrant
+/storage/*-bucket.json
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
+package-lock.json
+composer.lock
+laravel-echo-server.json

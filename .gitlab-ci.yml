@@ -1,0 +1,37 @@
+stages:
+  - test
+#  - deploy
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+  - node_modules/
+  - vendor/
+
+test:
+  image: edbizarro/gitlab-ci-pipeline-php:7.2-alpine
+  stage: test
+  script:
+    - cp .env.testing .env
+    - composer update --ignore-platform-reqs --no-interaction
+    - php artisan key:generate
+    - php artisan config:clear
+    - php artisan config:cache
+    - php artisan migrate --seed
+    - php artisan passport:install
+    - php artisan storage:link
+    - php artisan serve &
+    - php artisan dusk
+    - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml
+    # - bash <(curl -s https://codecov.io/bash)
+
+#deploy:
+#  image: appropriate/curl:latest
+#  stage: deploy
+#  only:
+#   - master
+#  script:
+#    - curl -X POST ${DEPLOY_WEBHOOK_URL}
+#  environment:
+#    name: deploy
+#    url: https://deploy.app
