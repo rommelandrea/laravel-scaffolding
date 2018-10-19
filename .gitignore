@@ -15,3 +15,7 @@ yarn-error.log
 package-lock.json
 composer.lock
 laravel-echo-server.json
+/public/app.css
+/public/app.js
+/public/images/*
+!.gitkeep

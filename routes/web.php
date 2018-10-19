@@ -11,17 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/login/social/{social}', 'AuthenticationController@social')->name('social');
-Route::get('/login/social/{social}/confirmation', 'AuthenticationController@socialConfirmation')->name('social.confirmation');
-
-Route::group(['middleware' => ['guest']], function () {
-    Route::get('/login', 'AuthenticationController@index')->name('login');
-});
-
-Route::group(['middleware' => ['authenticated']], function () {
-    Route::get('/logout', 'AuthenticationController@logout')->name('logout');
-});
+Route::get('/', 'HomeController@index');
