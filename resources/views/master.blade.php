@@ -14,7 +14,7 @@
     <meta name="theme-color" content="@yield('appbar_hex_color', '#000aee')">
     <meta name="msapplication-navbutton-color" content="@yield('appbar_hex_color', '#000aee')">
     <meta name="msapplication-TileColor" content="@yield('appbar_hex_color', '#000aee')">
-    <meta name="apple-mobile-web-app-status-bar-style" content="@yield('appbar_hex_color', '@yield('appbar_hex_color', '#000aee')')">
+    <meta name="apple-mobile-web-app-status-bar-style" content="@yield('appbar_hex_color', '#000aee')">
     <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
 
     <meta property="og:url" content="{{ request()->url() }}" />
