@@ -62,6 +62,14 @@ class Handler extends ExceptionHandler
             }
         }
 
+        if ($exception instanceof \Laravel\Socialite\Two\InvalidStateException) {
+            // invalid state; redirect
+        }
+
+        if ($exception instanceof \GuzzleHttp\Exception\ClientException) {
+            // client exception; redirect
+        }
+
         return parent::render($request, $exception);
     }
 }

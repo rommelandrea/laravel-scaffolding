@@ -53,6 +53,7 @@
   <body>
     @yield('content')
 
+    <jquery version="3.3.1" />
     <js file="" />
     @yield('postjs')
   </body>
